@@ -173,7 +173,7 @@ class="general-btn general-btn-bg general-btn-border general-btn-shadow  font-si
 class="scroll-to-btn-micro-text"><div
 class="button-micro-text " style="color:#FEFEFE">Eerstvolgende training: 6 mei · Daarna: 18 juni</div></div></div></div></div>
 <div style="text-align:center; margin-top:12px;">
-<a href="https://youmanual.talentfirst.nl/nl/voorbeeld" target="_blank" style="color:#FEFEFE; text-decoration:underline; font-size:0.95em; opacity:0.85;">Of bekijk eerst een You.Manual™ voorbeeldrapport →</a>
+<a href="#optin-voorbeeldrapport" style="color:#FEFEFE; text-decoration:underline; font-size:0.95em; opacity:0.85;">Of bekijk eerst een You.Manual&#8482; voorbeeldrapport →</a>
 </div></div></div></div></div></div></div><div
 class="odd-even-row  all-devices  flat-theme"><div
 class="row-nest-one" data-rowuuid="e02db419-24b3-4c81-b1c1-09bf79f7f8d1" id="5" data-element="title-txt-btn"><div
@@ -292,7 +292,7 @@ class="full-row-center"><div style="max-width: 1040px; margin: 0 auto; padding: 
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
-<a href="https://youmanual.talentfirst.nl/nl/voorbeeld" target="_blank" style="display: inline-block; color: #0E3A79; font-weight: bold; text-decoration: none; border-bottom: 2px solid #E10D36; padding-bottom: 3px;">→ Bekijk een You.Manual™-voorbeeldrapport</a>
+<a href="#optin-voorbeeldrapport" style="display: inline-block; color: #0E3A79; font-weight: bold; text-decoration: none; border-bottom: 2px solid #E10D36; padding-bottom: 3px;">→ Bekijk een You.Manual&#8482;-voorbeeldrapport</a>
 </div>
 
 </div></div></div></div></div></div></div>
@@ -555,6 +555,84 @@ class="full-row-center"><div style="max-width: 1080px; margin: 0 auto; padding: 
 </div></div></div></div></div></div></div>
 <!-- EINDE TRUSTPILOT REVIEWS BLOK -->
 
+<!-- OPT-IN: VOORBEELDRAPPORT ACHTER EMAIL GATE -->
+<div class="odd-even-row all-devices flat-theme"><div
+class="row-nest-one" data-rowuuid="optin-voorbeeldrapport-001" id="optin-voorbeeldrapport" data-element="title-txt-btn"><div
+class="row-nest-two"><div
+class="row-nest-three row-bg-gray" style="color: #333333; background: linear-gradient(135deg, #0E3A79 0%, #1A4FA0 100%);"><div
+class="full-row flat-theme" style="padding: 70px 0;"><div
+class="full-row-center"><div style="max-width: 860px; margin: 0 auto; padding: 0 20px; display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+
+<div style="flex: 1; min-width: 280px;">
+<div style="display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 0.8em; font-weight: bold; padding: 5px 12px; border-radius: 15px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px;">Gratis inzicht</div>
+<h2 style="color: #fff; font-size: 1.6em; margin: 0 0 14px 0; line-height: 1.3;">Bekijk een volledig You.Manual&#8482; rapport</h2>
+<p style="color: #E0ECF8; font-size: 1.05em; line-height: 1.65; margin: 0 0 20px 0;">Geen samenvatting, geen screenshot. Het complete rapport zoals jouw klanten het ontvangen: DISC-profiel, mindset-metingen, werkgeluk, personal brand en het toekomstkompas.</p>
+<ul style="list-style: none; padding: 0; margin: 0; color: #E0ECF8; font-size: 0.95em; line-height: 2;">
+<li>&#10003; 40 pagina's persoonlijk rapport</li>
+<li>&#10003; Alle 6 lagen van You.Manual&#8482;</li>
+<li>&#10003; In de huisstijl zoals jouw klant het ziet</li>
+</ul>
+</div>
+
+<div style="flex: 0 0 340px; min-width: 280px;">
+<div style="background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.2);">
+<h3 style="color: #0E3A79; font-size: 1.15em; margin: 0 0 6px 0; text-align: center;">Ontvang het voorbeeldrapport</h3>
+<p style="color: #777; font-size: 0.85em; text-align: center; margin: 0 0 20px 0;">Direct in je inbox. Geen spam, geen verplichtingen.</p>
+<form id="optin-form" onsubmit="return handleOptinSubmit(event)">
+<input type="text" name="voornaam" id="optin-voornaam" placeholder="Je voornaam" required style="width: 100%; padding: 13px 16px; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1em; margin-bottom: 12px; box-sizing: border-box; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#0E3A79'" onblur="this.style.borderColor='#E0E0E0'">
+<input type="email" name="email" id="optin-email" placeholder="Je e-mailadres" required style="width: 100%; padding: 13px 16px; border: 2px solid #E0E0E0; border-radius: 8px; font-size: 1em; margin-bottom: 16px; box-sizing: border-box; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#0E3A79'" onblur="this.style.borderColor='#E0E0E0'">
+<button type="submit" id="optin-btn" style="width: 100%; padding: 15px; background: #E10D36; color: #fff; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 14px rgba(225,13,54,0.3);" onmouseover="this.style.background='#C80B2F'" onmouseout="this.style.background='#E10D36'">Stuur mij het rapport &#8594;</button>
+</form>
+<div id="optin-success" style="display: none; text-align: center; padding: 20px 0;">
+<div style="font-size: 2em; margin-bottom: 8px;">&#9989;</div>
+<p style="color: #0E3A79; font-weight: bold; font-size: 1.1em; margin: 0 0 8px 0;">Check je inbox!</p>
+<p style="color: #555; font-size: 0.9em; margin: 0;">Het rapport is onderweg. Niet ontvangen? Check je spam.</p>
+</div>
+<p style="color: #999; font-size: 0.75em; text-align: center; margin: 12px 0 0 0;">We respecteren je privacy. Geen spam, uitschrijven kan altijd.</p>
+</div>
+</div>
+
+</div></div></div></div></div></div></div>
+
+<script>
+function handleOptinSubmit(e) {
+  e.preventDefault();
+  var voornaam = document.getElementById('optin-voornaam').value.trim();
+  var email = document.getElementById('optin-email').value.trim();
+  if (!voornaam || !email) return false;
+
+  var btn = document.getElementById('optin-btn');
+  btn.textContent = 'Even geduld...';
+  btn.disabled = true;
+
+  // AC site tracking: identificeer bezoeker
+  if (typeof vgo === 'function') {
+    vgo('setEmail', email);
+    vgo('process');
+  }
+
+  // POST naar backend opt-in endpoint
+  fetch('https://chat.talentfirst.nl/api/optin', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ voornaam: voornaam, email: email, bron: 'salespage-voorbeeldrapport' })
+  })
+  .then(function(r) { return r.json(); })
+  .catch(function() { return { ok: true }; }) // bij fout toch doorgaan
+  .then(function() {
+    document.getElementById('optin-form').style.display = 'none';
+    document.getElementById('optin-success').style.display = 'block';
+    // Open voorbeeldrapport na korte delay
+    setTimeout(function() {
+      window.open('https://youmanual.talentfirst.nl/nl/voorbeeld', '_blank');
+    }, 1500);
+  });
+
+  return false;
+}
+</script>
+<!-- EINDE OPT-IN VOORBEELDRAPPORT -->
+
 <!-- YOUMANUAL SHOWCASE BLOK -->
 <div class="odd-even-row all-devices flat-theme"><div
 class="row-nest-one" data-rowuuid="youmanual-showcase-001" id="youmanual-showcase" data-element="title-txt-btn"><div
@@ -658,8 +736,8 @@ class="full-row-center"><div style="max-width: 1080px; margin: 0 auto; padding: 
 </div>
 
 <div style="text-align: center; margin-top: 44px;">
-<a href="https://youmanual.talentfirst.nl/nl/voorbeeld" target="_blank" style="display: inline-block; background: #E10D36; color: #fff; font-weight: bold; padding: 16px 34px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(225,13,54,0.30); font-size: 1.05em;">Bekijk het volledige voorbeeldrapport →</a>
-<p style="color: #777; font-size: 0.9em; margin-top: 12px;">Opent in een nieuw tabblad · geen inschrijving nodig</p>
+<a href="#optin-voorbeeldrapport" style="display: inline-block; background: #E10D36; color: #fff; font-weight: bold; padding: 16px 34px; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 14px rgba(225,13,54,0.30); font-size: 1.05em;">Bekijk het volledige voorbeeldrapport →</a>
+<p style="color: #777; font-size: 0.9em; margin-top: 12px;">Vul je naam en e-mail in en ontvang het direct</p>
 </div>
 
 </div></div></div></div></div></div></div>
