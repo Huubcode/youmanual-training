@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aan de slag met You.Manual™ | TalentFirst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto Slab', Georgia, serif;
+      color: #333;
+      background: #F8FBFF;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .header {
+      background: #0E3A79;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 1.1em;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .intro {
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .step {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 1px solid #e8e8e4;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .step-number {
+      display: inline-block;
+      background: #E10D36;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 36px;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    .step h2 {
+      display: inline;
+      font-size: 1.3em;
+      color: #0E3A79;
+      vertical-align: middle;
+    }
+
+    .step p, .step ul {
+      margin-top: 16px;
+    }
+
+    .step ul {
+      padding-left: 20px;
+    }
+
+    .step li {
+      margin-bottom: 8px;
+    }
+
+    .tip {
+      background: #E8F0F8;
+      border-left: 4px solid #0E3A79;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 16px;
+      font-size: 0.95em;
+    }
+
+    .tip strong {
+      color: #0E3A79;
+    }
+
+    .options-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.95em;
+    }
+
+    .options-table th {
+      background: #0E3A79;
+      color: white;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .options-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e8e4;
+    }
+
+    .options-table tr:nth-child(even) td {
+      background: #f7f9fc;
+    }
+
+    h3 {
+      color: #E10D36;
+      font-size: 1.05em;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .credit-box {
+      background: #fff8e1;
+      border: 1px solid #f5c800;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 0.95em;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 48px 24px;
+      margin-top: 40px;
+    }
+
+    .cta-section p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #0E3A79;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #E10D36;
+      color: white;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-family: 'Roboto Slab', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.1em;
+      transition: opacity 0.2s;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #e8e8e4;
+    }
+
+    .footer a {
+      color: #E10D36;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 1.6em; }
+      .step { padding: 24px 20px; }
+      .options-table { font-size: 0.85em; }
+      .options-table th, .options-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://media-01.imu.nl/storage/talentfirst.nl/32409/bestelogo.jpg" alt="TalentFirst">
+  <h1>Aan de slag met You.Manual&trade;</h1>
+  <p>Je account staat klaar. In 10 minuten weet je hoe alles werkt.</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p>Je bent gecertificeerd, je hebt een account &mdash; en nu? Deze pagina loodst je stap voor stap door het You.Manual&trade; dashboard. Van je eerste deelnemer aanmaken tot het rapport vrijgeven.</p>
+    <p>Geen dikke handleiding. Gewoon doen.</p>
+  </div>
+
+  <!-- Stap 1 -->
+  <div class="step">
+    <span class="step-number">1</span>
+    <h2>Inloggen</h2>
+    <p>Ga naar <a href="https://youmanual.talentfirst.nl/login" style="color:#E10D36;">youmanual.talentfirst.nl/login</a> en log in met het e-mailadres waarmee je je hebt geregistreerd.</p>
+    <p>Je komt op je dashboard. Daar zie je in &eacute;&eacute;n oogopslag hoeveel deelnemers je hebt, wie er bezig is, en hoeveel credits je nog hebt.</p>
+  </div>
+
+  <!-- Stap 2 -->
+  <div class="step">
+    <span class="step-number">2</span>
+    <h2>Credits kopen</h2>
+    <p>Elk You.Manual&trade; rapport kost 1 credit. Klik op <strong>&ldquo;Credits&rdquo;</strong> in het menu links.</p>
+    <p>Kies het aantal dat je nodig hebt. Betalen kan met iDEAL of creditcard. Je credits staan direct op je account.</p>
+
+    <table class="options-table">
+      <tr><th>Aantal</th><th>Per rapport</th><th>Korting</th></tr>
+      <tr><td>1&ndash;9</td><td>&euro;57,50</td><td>&mdash;</td></tr>
+      <tr><td>25+</td><td>&euro;54,63</td><td>~5%</td></tr>
+      <tr><td>50+</td><td>&euro;51,75</td><td>~10%</td></tr>
+      <tr><td>100+</td><td>&euro;46,00</td><td>~20%</td></tr>
+    </table>
+
+    <div class="tip"><strong>Tip:</strong> Prijzen zijn exclusief 21% btw.</div>
+  </div>
+
+  <!-- Stap 3 -->
+  <div class="step">
+    <span class="step-number">3</span>
+    <h2>Deelnemer aanmaken</h2>
+    <p>Klik op <strong>&ldquo;+ Nieuwe deelnemer&rdquo;</strong>. Vul in:</p>
+    <ul>
+      <li><strong>Naam</strong> &mdash; verschijnt op het rapport</li>
+      <li><strong>Geslacht</strong> &mdash; bepaalt de schrijfstijl (hij/zij) in het rapport</li>
+      <li><strong>Taal</strong> &mdash; Nederlands of Engels</li>
+      <li><strong>E-mailadres</strong> (optioneel) &mdash; vul je dit in, dan kan het systeem de uitnodiging en het rapport automatisch mailen</li>
+    </ul>
+
+    <h3>Optionele modules</h3>
+    <p>Onder het formulier vind je twee toevoegingen, elk &frac13; credit extra:</p>
+    <ul>
+      <li><strong>360-feedback</strong> &mdash; je deelnemer kan collega&rsquo;s en leidinggevenden uitnodigen voor feedback</li>
+      <li><strong>Community &amp; e-learning</strong> &mdash; toegang tot de Huddle-omgeving</li>
+    </ul>
+
+    <div class="credit-box">
+      <strong>Wat kost het?</strong> 1 credit voor het rapport + &frac13; per optionele module die je activeert. Het totaal zie je voordat je bevestigt.
+    </div>
+  </div>
+
+  <!-- Stap 4 -->
+  <div class="step">
+    <span class="step-number">4</span>
+    <h2>Rapportopties kiezen</h2>
+    <p>Bij elke deelnemer kun je het rapport aanpassen. Je vindt deze opties onder het formulier bij &ldquo;Rapportconfiguratie&rdquo;.</p>
+
+    <h3>Rapportlengte</h3>
+    <table class="options-table">
+      <tr><th>Optie</th><th>Pagina&rsquo;s</th><th>Wanneer</th></tr>
+      <tr><td>Kort</td><td>~8</td><td>Snelle kennismaking met iemands stijl</td></tr>
+      <tr><td>Standaard</td><td>~20</td><td>De sweet spot voor de meeste trajecten</td></tr>
+      <tr><td>Uitgebreid</td><td>~30</td><td>Diepere coaching, leiderschapstrajecten</td></tr>
+      <tr><td>Volledig</td><td>~40</td><td>Alles, inclusief Merk IK&reg;</td></tr>
+    </table>
+
+    <h3>Doelgroep</h3>
+    <table class="options-table">
+      <tr><th>Optie</th><th>Wat het doet</th></tr>
+      <tr><td>Standaard</td><td>Gebalanceerde toon, geschikt voor iedereen</td></tr>
+      <tr><td>Managers &amp; Professionals</td><td>Analytischer taalgebruik, strategische context</td></tr>
+      <tr><td>Praktisch geschoolden</td><td>Eenvoudige taal, concrete voorbeelden</td></tr>
+    </table>
+
+    <h3>Secties fijnafstemmen</h3>
+    <p>Wil je nog preciezer? Je kunt individuele secties aan- of uitzetten. Denk aan: Kern DISC-analyse, Verdieping, Interpersoonlijk, Gedragspatronen, Professioneel, Werk &amp; welzijn, Groei &amp; toekomst, en Merk IK&reg;.</p>
+
+    <div class="tip"><strong>Tip:</strong> Je kunt per deelnemer andere opties kiezen. Handig als je in &eacute;&eacute;n traject zowel managers als medewerkers hebt.</div>
+  </div>
+
+  <!-- Stap 5 -->
+  <div class="step">
+    <span class="step-number">5</span>
+    <h2>Link delen</h2>
+    <p>Na het aanmaken krijg je een unieke link. Deel deze met je deelnemer &mdash; via de automatische mail of door de link te kopi&euml;ren en zelf te versturen.</p>
+    <p>Je deelnemer opent de link, beantwoordt 24 stellingen, en het You.Manual&trade; rapport wordt automatisch gegenereerd.</p>
+  </div>
+
+  <!-- Stap 6 -->
+  <div class="step">
+    <span class="step-number">6</span>
+    <h2>Rapport bekijken en vrijgeven</h2>
+    <p>Zodra je deelnemer klaar is, verschijnt het rapport in je dashboard. Standaard moet je het rapport eerst zelf reviewen voordat je deelnemer het kan zien.</p>
+    <p>Klik op de deelnemer &rarr; bekijk het rapport &rarr; klik op <strong>&ldquo;Rapport vrijgeven&rdquo;</strong>. Je deelnemer krijgt automatisch een mail met de link naar het rapport.</p>
+
+    <div class="tip"><strong>Wil je dat het rapport direct zichtbaar is?</strong> Vink dan bij het aanmaken &ldquo;Rapport eerst reviewen&rdquo; uit. Het rapport gaat dan meteen naar de deelnemer zodra het klaar is.</div>
+  </div>
+
+  <!-- Stap 7 -->
+  <div class="step">
+    <span class="step-number">7</span>
+    <h2>Groepslink aanmaken</h2>
+    <p>Heb je een hele groep? Ga naar <strong>&ldquo;Groepslinks&rdquo;</strong> in het menu en maak een link aan. Iedereen die de link opent kan zich aanmelden &mdash; geen individuele uitnodigingen nodig.</p>
+    <p>De rapportopties die je bij de groepslink instelt, gelden voor alle deelnemers die zich via die link aanmelden.</p>
+  </div>
+
+  <!-- Stap 8 -->
+  <div class="step">
+    <span class="step-number">8</span>
+    <h2>360-feedback instellen</h2>
+    <p>Heb je de 360-module geactiveerd? Dan kan je deelnemer zelf collega&rsquo;s, leidinggevenden en klanten uitnodigen om feedback te geven.</p>
+    <p>Je volgt de voortgang via het deelnemersoverzicht: hoeveel mensen zijn uitgenodigd, hoeveel hebben gereageerd. Onder <strong>&ldquo;Team 360&rdquo;</strong> zie je patronen over je hele groep &mdash; blinde vlekken, sterke punten, en waar zelfbeeld en buitenbeeld uiteen lopen.</p>
+  </div>
+
+  <div class="cta-section">
+    <p>Vragen? Stuur een mail naar <a href="mailto:support@talentfirst.nl" style="color:#E10D36;">support@talentfirst.nl</a></p>
+    <a href="https://youmanual.talentfirst.nl/login" class="cta-button">Naar je dashboard &rarr;</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; TalentFirst Nederland BV &mdash; <a href="https://www.talentfirst.nl">www.talentfirst.nl</a></p>
+</div>
+
+</body>
+</html>
