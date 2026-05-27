@@ -19,7 +19,7 @@
     .header {
       background: #0E3A79;
       color: white;
-      padding: 40px 20px;
+      padding: 48px 20px;
       text-align: center;
     }
 
@@ -61,30 +61,34 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
     .step-number {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: #E10D36;
       color: white;
       width: 36px;
       height: 36px;
+      min-width: 36px;
       border-radius: 50%;
-      text-align: center;
-      line-height: 36px;
       font-weight: 700;
       font-size: 16px;
-      margin-right: 12px;
-      vertical-align: middle;
     }
 
     .step h2 {
-      display: inline;
       font-size: 1.3em;
       color: #0E3A79;
-      vertical-align: middle;
     }
 
     .step p, .step ul {
-      margin-top: 16px;
+      margin-top: 12px;
     }
 
     .step ul {
@@ -106,6 +110,25 @@
 
     .tip strong {
       color: #0E3A79;
+    }
+
+    .screenshot-placeholder {
+      background: #f0f0ec;
+      border: 2px dashed #ccc;
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+
+    .screenshot-placeholder span {
+      display: block;
+      font-size: 1.4em;
+      margin-bottom: 8px;
+      font-style: normal;
     }
 
     .options-table {
@@ -192,6 +215,7 @@
 
     @media (max-width: 600px) {
       .header h1 { font-size: 1.6em; }
+      .header { padding: 32px 16px; }
       .step { padding: 24px 20px; }
       .options-table { font-size: 0.85em; }
       .options-table th, .options-table td { padding: 8px 10px; }
@@ -209,132 +233,292 @@
 <div class="container">
 
   <div class="intro">
-    <p>Je bent gecertificeerd, je hebt een account &mdash; en nu? Deze pagina loodst je stap voor stap door het You.Manual&trade; dashboard. Van je eerste deelnemer aanmaken tot het rapport vrijgeven.</p>
-    <p>Geen dikke handleiding. Gewoon doen.</p>
+    <p>Gecertificeerd. Account geactiveerd. En nu?</p>
+    <p>Deze pagina loopt met je mee door het hele platform. Van inloggen tot rapport vrijgeven, van groepslinks tot 360-feedback. Stap voor stap, zonder poespas.</p>
+    <p>De eerste keer voelt als de lastigste. Na je eerste deelnemer snap je het. Beloofd.</p>
   </div>
 
-  <!-- Stap 1 -->
+  <!-- Stap 1: Inloggen & Dashboard -->
   <div class="step">
-    <span class="step-number">1</span>
-    <h2>Inloggen</h2>
-    <p>Ga naar <a href="https://youmanual.talentfirst.nl/login" style="color:#E10D36;">youmanual.talentfirst.nl/login</a> en log in met het e-mailadres waarmee je je hebt geregistreerd.</p>
-    <p>Je komt op je dashboard. Daar zie je in &eacute;&eacute;n oogopslag hoeveel deelnemers je hebt, wie er bezig is, en hoeveel credits je nog hebt.</p>
+    <div class="step-header">
+      <span class="step-number">1</span>
+      <h2>Inloggen en je dashboard</h2>
+    </div>
+    <p>Ga naar <a href="https://youmanual.talentfirst.nl/login" style="color:#E10D36; font-weight:700;">youmanual.talentfirst.nl</a> en log in met je e-mailadres.</p>
+    <p>Je landt op je dashboard. Daar zie je in &eacute;&eacute;n oogopslag:</p>
+    <ul>
+      <li>Hoeveel deelnemers je hebt (totaal, uitgenodigd, bezig, afgerond)</li>
+      <li>Je recente deelnemers met hun status</li>
+      <li>Snelknoppen: <strong>&ldquo;Nieuwe deelnemer&rdquo;</strong> en <strong>&ldquo;Bulk import&rdquo;</strong></li>
+    </ul>
+    <p>Alles begint hier. Dit is je thuisbasis.</p>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/01-dashboard.png"
+         alt="Dashboard-overzicht met statuscards en deelnemerslijst"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 2 -->
+  <!-- Stap 2: Credits kopen -->
   <div class="step">
-    <span class="step-number">2</span>
-    <h2>Credits kopen</h2>
-    <p>Elk You.Manual&trade; rapport kost 1 credit. Klik op <strong>&ldquo;Credits&rdquo;</strong> in het menu links.</p>
-    <p>Kies het aantal dat je nodig hebt. Betalen kan met iDEAL of creditcard. Je credits staan direct op je account.</p>
+    <div class="step-header">
+      <span class="step-number">2</span>
+      <h2>Credits kopen</h2>
+    </div>
+    <p>Elk You.Manual&trade; rapport kost 1 credit. Voordat je deelnemers kunt aanmaken, heb je credits nodig.</p>
+    <p>Klik op <strong>&ldquo;Credits&rdquo;</strong> in het menu. Kies hoeveel je wilt kopen. Je ziet direct wat het kost. Betalen kan met iDEAL of creditcard via Stripe. Credits staan direct op je account.</p>
 
     <table class="options-table">
       <tr><th>Aantal</th><th>Per rapport</th><th>Korting</th></tr>
-      <tr><td>1&ndash;9</td><td>&euro;57,50</td><td>&mdash;</td></tr>
-      <tr><td>25+</td><td>&euro;54,63</td><td>~5%</td></tr>
-      <tr><td>50+</td><td>&euro;51,75</td><td>~10%</td></tr>
-      <tr><td>100+</td><td>&euro;46,00</td><td>~20%</td></tr>
+      <tr><td>1 &ndash; 24</td><td>&euro; 57,50</td><td>&ndash;</td></tr>
+      <tr><td>25 &ndash; 49</td><td>&euro; 54,63</td><td>5%</td></tr>
+      <tr><td>50 &ndash; 74</td><td>&euro; 51,75</td><td>10%</td></tr>
+      <tr><td>75 &ndash; 99</td><td>&euro; 48,88</td><td>15%</td></tr>
+      <tr><td>100+</td><td>&euro; 46,00</td><td>20%</td></tr>
     </table>
 
-    <div class="tip"><strong>Tip:</strong> Prijzen zijn exclusief 21% btw.</div>
+    <div class="credit-box">
+      <strong>Wat kost wat?</strong><br>
+      1 credit = 1 You.Manual&trade; rapport<br>
+      &frac13; credit extra = 360-feedback module per deelnemer<br>
+      &frac13; credit extra = Community &amp; e-learning per deelnemer
+    </div>
+
+    <div class="tip"><strong>Goed om te weten:</strong> Prijzen zijn exclusief 21% btw. Credits verlopen niet. En als je een rapport opnieuw genereert voor dezelfde deelnemer, kost dat geen extra credit.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/06-credits.png"
+         alt="Credits-pagina met saldo, staffelprijzen en betaalknop"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 3 -->
+  <!-- Stap 3: Deelnemer aanmaken -->
   <div class="step">
-    <span class="step-number">3</span>
-    <h2>Deelnemer aanmaken</h2>
-    <p>Klik op <strong>&ldquo;+ Nieuwe deelnemer&rdquo;</strong>. Vul in:</p>
+    <div class="step-header">
+      <span class="step-number">3</span>
+      <h2>Deelnemer aanmaken</h2>
+    </div>
+    <p>Klik op <strong>&ldquo;Nieuwe deelnemer&rdquo;</strong> op je dashboard. Vul de basisgegevens in:</p>
     <ul>
-      <li><strong>Naam</strong> &mdash; verschijnt op het rapport</li>
-      <li><strong>Geslacht</strong> &mdash; bepaalt de schrijfstijl (hij/zij) in het rapport</li>
-      <li><strong>Taal</strong> &mdash; Nederlands of Engels</li>
-      <li><strong>E-mailadres</strong> (optioneel) &mdash; vul je dit in, dan kan het systeem de uitnodiging en het rapport automatisch mailen</li>
+      <li><strong>Naam</strong> (verplicht): verschijnt op het rapport</li>
+      <li><strong>Geslacht</strong>: bepaalt de schrijfstijl (hij/zij) in het rapport</li>
+      <li><strong>Taal</strong>: Nederlands of Engels</li>
+      <li><strong>E-mailadres</strong> (optioneel): vul je dit in, dan kan het systeem automatisch een uitnodiging sturen</li>
     </ul>
 
     <h3>Optionele modules</h3>
-    <p>Onder het formulier vind je twee toevoegingen, elk &frac13; credit extra:</p>
+    <p>Onder het formulier vind je twee extra modules, elk &frac13; credit:</p>
     <ul>
-      <li><strong>360-feedback</strong> &mdash; je deelnemer kan collega&rsquo;s en leidinggevenden uitnodigen voor feedback</li>
-      <li><strong>Community &amp; e-learning</strong> &mdash; toegang tot de Huddle-omgeving</li>
+      <li><strong>360-feedback</strong>: je deelnemer kan collega's en leidinggevenden uitnodigen voor feedback (meer hierover bij stap 8)</li>
+      <li><strong>Community &amp; e-learning</strong>: toegang tot verdiepend lesmateriaal en de community-omgeving</li>
     </ul>
 
-    <div class="credit-box">
-      <strong>Wat kost het?</strong> 1 credit voor het rapport + &frac13; per optionele module die je activeert. Het totaal zie je voordat je bevestigt.
-    </div>
+    <h3>Geavanceerde opties</h3>
+    <p>Onder &ldquo;Geavanceerd&rdquo; vind je twee handige instellingen:</p>
+    <ul>
+      <li><strong>Controleer rapport v&oacute;&oacute;r vrijgave</strong>: als je dit aanvinkt, moet je het rapport eerst zelf bekijken en goedkeuren voordat je deelnemer het kan zien. Ideaal voor coaching-trajecten.</li>
+      <li><strong>Stuur uitnodigingsmail</strong>: automatisch een mail sturen naar je deelnemer met de link naar de vragenlijst.</li>
+    </ul>
+
+    <div class="tip"><strong>Tip:</strong> Je ziet altijd het totaal aan credits dat het gaat kosten voordat je bevestigt. Geen verrassingen.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/02-nieuwe-deelnemer.png"
+         alt="Formulier Nieuwe deelnemer met basisvelden en optionele modules"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 4 -->
+  <!-- Stap 4: Rapportopties -->
   <div class="step">
-    <span class="step-number">4</span>
-    <h2>Rapportopties kiezen</h2>
-    <p>Bij elke deelnemer kun je het rapport aanpassen. Je vindt deze opties onder het formulier bij &ldquo;Rapportconfiguratie&rdquo;.</p>
+    <div class="step-header">
+      <span class="step-number">4</span>
+      <h2>Rapportopties kiezen</h2>
+    </div>
+    <p>Bij elke deelnemer kun je het rapport op maat instellen. Je vindt deze opties onder &ldquo;Rapport instellingen&rdquo; in het formulier.</p>
 
     <h3>Rapportlengte</h3>
+    <p>Vier presets. Klik er eentje aan:</p>
     <table class="options-table">
-      <tr><th>Optie</th><th>Pagina&rsquo;s</th><th>Wanneer</th></tr>
-      <tr><td>Kort</td><td>~8</td><td>Snelle kennismaking met iemands stijl</td></tr>
-      <tr><td>Standaard</td><td>~20</td><td>De sweet spot voor de meeste trajecten</td></tr>
-      <tr><td>Uitgebreid</td><td>~30</td><td>Diepere coaching, leiderschapstrajecten</td></tr>
-      <tr><td>Volledig</td><td>~40</td><td>Alles, inclusief Merk IK&reg;</td></tr>
+      <tr><th>Preset</th><th>Pagina's</th><th>Wanneer kiezen?</th></tr>
+      <tr><td><strong>Kort</strong></td><td>~8</td><td>Snelle kennismaking met iemands stijl</td></tr>
+      <tr><td><strong>Standaard</strong></td><td>~20</td><td>De sweet spot voor de meeste trajecten</td></tr>
+      <tr><td><strong>Uitgebreid</strong></td><td>~30</td><td>Diepere coaching of leiderschapstrajecten</td></tr>
+      <tr><td><strong>Volledig</strong></td><td>~40</td><td>Alles, inclusief Merk IK&reg;</td></tr>
     </table>
 
     <h3>Doelgroep</h3>
+    <p>Het rapport past de toon en het taalgebruik aan op je doelgroep:</p>
     <table class="options-table">
-      <tr><th>Optie</th><th>Wat het doet</th></tr>
-      <tr><td>Standaard</td><td>Gebalanceerde toon, geschikt voor iedereen</td></tr>
-      <tr><td>Managers &amp; Professionals</td><td>Analytischer taalgebruik, strategische context</td></tr>
-      <tr><td>Praktisch geschoolden</td><td>Eenvoudige taal, concrete voorbeelden</td></tr>
+      <tr><th>Doelgroep</th><th>Wat het doet</th></tr>
+      <tr><td><strong>Standaard</strong></td><td>Gebalanceerde toon, geschikt voor iedereen</td></tr>
+      <tr><td><strong>Managers &amp; Professionals</strong></td><td>Analytischer taalgebruik, strategische context</td></tr>
+      <tr><td><strong>Praktisch geschoolden</strong></td><td>Eenvoudige taal, concrete voorbeelden</td></tr>
     </table>
 
     <h3>Secties fijnafstemmen</h3>
-    <p>Wil je nog preciezer? Je kunt individuele secties aan- of uitzetten. Denk aan: Kern DISC-analyse, Verdieping, Interpersoonlijk, Gedragspatronen, Professioneel, Werk &amp; welzijn, Groei &amp; toekomst, en Merk IK&reg;.</p>
+    <p>Wil je preciezer sturen? Zet individuele secties aan of uit:</p>
+    <ul>
+      <li>&#128202; Kern DISC-analyse</li>
+      <li>&#128300; Verdiepingslaag</li>
+      <li>&#129309; Interpersoonlijk</li>
+      <li>&#127919; Gedragspatronen</li>
+      <li>&#128188; Professioneel</li>
+      <li>&#9889; Werk &amp; welzijn</li>
+      <li>&#127793; Groei &amp; toekomst</li>
+      <li>&#10024; Merk IK&reg;</li>
+    </ul>
+    <p>Kies je secties buiten een preset? Dan verschijnt &ldquo;Aangepast&rdquo; als label. Helemaal prima.</p>
 
-    <div class="tip"><strong>Tip:</strong> Je kunt per deelnemer andere opties kiezen. Handig als je in &eacute;&eacute;n traject zowel managers als medewerkers hebt.</div>
+    <div class="tip"><strong>Tip:</strong> Je kunt per deelnemer andere rapportopties kiezen. Handig als je in hetzelfde traject zowel managers als medewerkers hebt.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/03-rapportinstellingen.png"
+         alt="Rapportconfiguratie met presets, doelgroepknoppen en sectie-toggles"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 5 -->
+  <!-- Stap 5: Link delen -->
   <div class="step">
-    <span class="step-number">5</span>
-    <h2>Link delen</h2>
-    <p>Na het aanmaken krijg je een unieke link. Deel deze met je deelnemer &mdash; via de automatische mail of door de link te kopi&euml;ren en zelf te versturen.</p>
-    <p>Je deelnemer opent de link, beantwoordt 24 stellingen, en het You.Manual&trade; rapport wordt automatisch gegenereerd.</p>
+    <div class="step-header">
+      <span class="step-number">5</span>
+      <h2>Vragenlijst-link versturen</h2>
+    </div>
+    <p>Na het aanmaken zie je een bevestigingsscherm met een unieke link. Dit is de link die je deelnemer nodig heeft om de vragenlijst in te vullen.</p>
+
+    <h3>Drie manieren om te delen</h3>
+    <ul>
+      <li><strong>Automatisch per mail</strong>: heb je &ldquo;Stuur uitnodigingsmail&rdquo; aangevinkt? Dan is de mail al onderweg.</li>
+      <li><strong>Link kopi&euml;ren</strong>: klik op het kopieer-icoontje en plak de link in een eigen mail, WhatsApp of Teams-bericht.</li>
+      <li><strong>Later terugvinden</strong>: de link staat altijd op de detailpagina van de deelnemer in je dashboard.</li>
+    </ul>
+
+    <p>Je deelnemer opent de link, beantwoordt 24 stellingen (kost zo'n 10 minuten), en het You.Manual&trade; rapport wordt automatisch gegenereerd. Duurt een halve minuut tot een minuut.</p>
+
+    <div class="tip"><strong>Goed om te weten:</strong> De link blijft geldig totdat je deelnemer de vragenlijst heeft ingevuld. Geen haast dus.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/04-assessmentlink.png"
+         alt="Bevestigingsscherm met assessment-link en kopieerknop"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 6 -->
+  <!-- Stap 6: Rapport bekijken en vrijgeven -->
   <div class="step">
-    <span class="step-number">6</span>
-    <h2>Rapport bekijken en vrijgeven</h2>
-    <p>Zodra je deelnemer klaar is, verschijnt het rapport in je dashboard. Standaard moet je het rapport eerst zelf reviewen voordat je deelnemer het kan zien.</p>
-    <p>Klik op de deelnemer &rarr; bekijk het rapport &rarr; klik op <strong>&ldquo;Rapport vrijgeven&rdquo;</strong>. Je deelnemer krijgt automatisch een mail met de link naar het rapport.</p>
+    <div class="step-header">
+      <span class="step-number">6</span>
+      <h2>Rapport bekijken en vrijgeven</h2>
+    </div>
+    <p>Zodra je deelnemer de vragenlijst heeft afgerond, verandert de status in je dashboard naar &ldquo;Afgerond&rdquo;. Het rapport is klaar.</p>
 
-    <div class="tip"><strong>Wil je dat het rapport direct zichtbaar is?</strong> Vink dan bij het aanmaken &ldquo;Rapport eerst reviewen&rdquo; uit. Het rapport gaat dan meteen naar de deelnemer zodra het klaar is.</div>
+    <h3>Als je &ldquo;Controleer rapport v&oacute;&oacute;r vrijgave&rdquo; hebt aanstaan</h3>
+    <p>Het rapport is dan vergrendeld. Je deelnemer ziet een melding dat de coach het rapport nog moet vrijgeven.</p>
+    <p>Dit doe je zo:</p>
+    <ul>
+      <li>Klik op de deelnemer in je dashboard</li>
+      <li>Bekijk het rapport (je ziet het volledige rapport als coach)</li>
+      <li>Klik op <strong>&ldquo;Rapport vrijgeven&rdquo;</strong></li>
+    </ul>
+    <p>Klaar. Je deelnemer kan het rapport nu bekijken.</p>
+
+    <h3>Zonder review-gate</h3>
+    <p>Heb je de review-optie niet aangevinkt? Dan kan je deelnemer het rapport direct bekijken zodra het is gegenereerd. Niks te doen aan jouw kant.</p>
+
+    <div class="tip"><strong>Tip voor coaches:</strong> De review-gate is ideaal voor trajecten waarin je het rapport samen wilt bespreken tijdens een coachgesprek. Zo voorkom je dat je deelnemer het rapport al heeft gelezen voordat jullie samen zitten.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/05-deelnemerpagina.png"
+         alt="Deelnemerspagina met rapport-status en vrijgaveknop"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 7 -->
+  <!-- Stap 7: Groepslink -->
   <div class="step">
-    <span class="step-number">7</span>
-    <h2>Groepslink aanmaken</h2>
-    <p>Heb je een hele groep? Ga naar <strong>&ldquo;Groepslinks&rdquo;</strong> in het menu en maak een link aan. Iedereen die de link opent kan zich aanmelden &mdash; geen individuele uitnodigingen nodig.</p>
-    <p>De rapportopties die je bij de groepslink instelt, gelden voor alle deelnemers die zich via die link aanmelden.</p>
+    <div class="step-header">
+      <span class="step-number">7</span>
+      <h2>Groepslink aanmaken</h2>
+    </div>
+    <p>Heb je een heel team of een groep deelnemers? Dan hoef je niet iedereen apart aan te maken. Maak een groepslink.</p>
+
+    <p>Ga naar <strong>&ldquo;Groepslinks&rdquo;</strong> in het menu en klik op <strong>&ldquo;Nieuwe link&rdquo;</strong>.</p>
+    <ul>
+      <li>Geef de link een naam (bijvoorbeeld &ldquo;Team Sales Q3&rdquo;)</li>
+      <li>Er wordt automatisch een unieke URL aangemaakt</li>
+      <li>Stel de rapportopties in (lengte, doelgroep, secties). Deze gelden voor iedereen die zich via de link aanmeldt.</li>
+      <li>Optioneel: zet &ldquo;Controleer rapport v&oacute;&oacute;r vrijgave&rdquo; aan</li>
+    </ul>
+
+    <p>Deel de link met je groep. Iedereen die de link opent, vult zelf naam en e-mailadres in en start de vragenlijst. Geen losse uitnodigingen nodig.</p>
+
+    <div class="tip"><strong>Handig:</strong> Credits worden pas afgeschreven op het moment dat een deelnemer daadwerkelijk een rapport genereert. Je betaalt alleen voor wie meedoet.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/07-groepslink.png"
+         alt="Groepslinks-overzicht en Nieuwe link-formulier"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
-  <!-- Stap 8 -->
+  <!-- Stap 8: 360-feedback -->
   <div class="step">
-    <span class="step-number">8</span>
-    <h2>360-feedback instellen</h2>
-    <p>Heb je de 360-module geactiveerd? Dan kan je deelnemer zelf collega&rsquo;s, leidinggevenden en klanten uitnodigen om feedback te geven.</p>
-    <p>Je volgt de voortgang via het deelnemersoverzicht: hoeveel mensen zijn uitgenodigd, hoeveel hebben gereageerd. Onder <strong>&ldquo;Team 360&rdquo;</strong> zie je patronen over je hele groep &mdash; blinde vlekken, sterke punten, en waar zelfbeeld en buitenbeeld uiteen lopen.</p>
+    <div class="step-header">
+      <span class="step-number">8</span>
+      <h2>360-feedback instellen</h2>
+    </div>
+    <p>Met 360-feedback vergelijk je hoe iemand zichzelf ziet met hoe anderen diegene ervaren. Dat levert altijd verrassende inzichten op.</p>
+
+    <h3>Activeren</h3>
+    <p>360-feedback activeer je per deelnemer. Dat kan op twee momenten:</p>
+    <ul>
+      <li>Bij het aanmaken (vink &ldquo;Activeer 360-feedback&rdquo; aan, kost &frac13; credit)</li>
+      <li>Achteraf, op de detailpagina van een deelnemer die al een rapport heeft</li>
+    </ul>
+
+    <h3>Hoe werkt het?</h3>
+    <p>Je deelnemer krijgt een 360-dashboard. Daar kan die zelf respondenten uitnodigen: collega's, leidinggevenden, teamleden, klanten. Per respondent vul je naam, e-mail en de relatie in.</p>
+    <p>Uitnodigen kan via e-mail of WhatsApp. Je deelnemer volgt live hoeveel mensen zijn uitgenodigd en hoeveel er al hebben gereageerd.</p>
+
+    <h3>Resultaten en rapport</h3>
+    <p>Zodra er genoeg reacties binnen zijn:</p>
+    <ul>
+      <li>Vergelijking zelfbeeld vs. buitenbeeld per DISC-dimensie</li>
+      <li>AI-gegenereerde kernboodschap, blinde vlekken en sterke punten</li>
+      <li>Klik op <strong>&ldquo;Genereer 360&deg; rapport&rdquo;</strong> voor het volledige feedbackrapport</li>
+      <li>Je deelnemer kan een persoonlijk actieplan maken op basis van de feedback</li>
+    </ul>
+
+    <div class="tip"><strong>Tip:</strong> Feedback is standaard anoniem. Respondenten kunnen eerlijk zijn zonder dat hun naam bij hun antwoorden staat. Dit kun je aanpassen in de instellingen als je dat wilt.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/08-360-feedback.png"
+         alt="360-feedback dashboard met respondenten, status en resultaten"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
   </div>
 
+  <!-- Stap 9: Profiel instellen -->
+  <div class="step">
+    <div class="step-header">
+      <span class="step-number">9</span>
+      <h2>Je profiel instellen</h2>
+    </div>
+    <p>Nog &eacute;&eacute;n ding. Ga naar <strong>&ldquo;Profiel&rdquo;</strong> in het menu en maak het platform van jou.</p>
+    <ul>
+      <li><strong>Logo uploaden</strong>: je eigen logo verschijnt op de rapporten van je deelnemers. Dat is h&uacute;n eerste indruk van jou als coach.</li>
+      <li><strong>Bedrijfskleuren instellen</strong>: kies een primaire kleur die past bij jouw huisstijl. Het rapport neemt die kleur over.</li>
+      <li><strong>Bedrijfsnaam en contactgegevens</strong>: staan op elke uitnodigingsmail die het systeem verstuurt namens jou.</li>
+    </ul>
+    <p>Kost twee minuten. Maakt een wereld van verschil voor hoe professioneel je overkomt.</p>
+
+    <div class="tip"><strong>Tip:</strong> Gebruik het rapport-voorbeeld op de profielpagina om live te zien hoe jouw kleuren en logo eruitzien. Zo hoef je niet te gokken.</div>
+
+    <img src="https://youmanual.talentfirst.nl/handleiding/09-profielpagina.png"
+         alt="Profielpagina met logo-upload, kleurkiezer en live rapport-preview"
+         style="width:100%; border-radius:8px; margin-top:20px; border:1px solid #e8e8e4; display:block;">
+  </div>
+
+  <!-- Afsluiting -->
   <div class="cta-section">
-    <p>Vragen? Stuur een mail naar <a href="mailto:support@talentfirst.nl" style="color:#E10D36;">support@talentfirst.nl</a></p>
+    <p>Dat was het. Negen stappen. Tien minuten leestijd.</p>
+    <p>Nu jij. Maak je eerste deelnemer aan, stuur de link, en zie wat er gebeurt als iemand z'n eigen You.Manual&trade; opent.</p>
+    <p style="margin-top: 16px;">Loop je ergens tegenaan? Mail <a href="mailto:support@talentfirst.nl" style="color:#E10D36; font-weight:700;">support@talentfirst.nl</a> of app ons. We reageren dezelfde dag.</p>
+    <br>
     <a href="https://youmanual.talentfirst.nl/login" class="cta-button">Naar je dashboard &rarr;</a>
   </div>
 
 </div>
 
 <div class="footer">
-  <p>&copy; TalentFirst Nederland BV &mdash; <a href="https://www.talentfirst.nl">www.talentfirst.nl</a></p>
+  <p>&copy; TalentFirst Nederland BV &middot; <a href="https://www.talentfirst.nl">www.talentfirst.nl</a></p>
 </div>
 
 </body>
