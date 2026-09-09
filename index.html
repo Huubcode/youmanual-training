@@ -769,6 +769,10 @@ class="full-row-center"><div style="max-width: 1080px; margin: 0 auto; padding: 
 <!-- EINDE YOUMANUAL SHOWCASE BLOK -->
 
 <style>
+/* De usp-grid staat vast op twee kolommen, ook als er maar één blok in zit.
+   Dat perste de opsomming in de halve breedte: drie woorden per regel. */
+.usp-grid:has(> :only-child) { grid-template-columns: 1fr !important; }
+
 @media (max-width: 900px) {
   .youmanual-showcase-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .youmanual-showcase-bonus { grid-template-columns: repeat(3, 1fr) !important; }
