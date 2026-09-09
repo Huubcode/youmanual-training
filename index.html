@@ -160,13 +160,13 @@ id="loadbalancer_valid_cache" style="display:none"></div><div
 class="odd-even-row  all-devices  flat-theme"><div
 class="row-nest-one" data-rowuuid="defd6474-087c-4354-8c21-19a54e053673" id="1" data-element="txt-hero-bg-img"><div
 class="row-nest-two" id="content_row_114027926"><div
-class="row-nest-three row-bg-gray     " style="color: #333333; background-color: ; background-image: ; "><div
+class="row-nest-three row-bg-gray     " style="color: #333333; background-color: ; background-image: ; "><div class="ym-logobalk"><img src="https://youmanual-training.talentfirst.nl/youmanual-logo.png" alt="You.Manual" width="300" height="55"></div><div
 class="full-hero-row image-bg-hero animation-parent animation-parent-slide-fade-up primary-c-bg-gradient no-responsive-padding flat-theme" data-animation="slide-fade-up"  ><div
 class="hero-bg-img overlay-active-mobile"><div
 class="bg-img-custom-overlay black imgsize-1920x500" style="opacity: 0.33;"></div><img
 srcset="images/header-met-man-en-2-vrouwen-1920x500_1606_418.png 1606w, images/header-met-man-en-2-vrouwen-1920x500_1343_350.png 1343w, images/header-met-man-en-2-vrouwen-1920x500_1124_293.png 1124w, images/header-met-man-en-2-vrouwen-1920x500_940_245.png 940w, images/header-met-man-en-2-vrouwen-1920x500_787_205.png 787w, images/header-met-man-en-2-vrouwen-1920x500_658_171.png 658w, images/header-met-man-en-2-vrouwen-1920x500_550_143.png 550w, images/header-met-man-en-2-vrouwen-1920x500_460_120.png 460w, images/header-met-man-en-2-vrouwen-1920x500_385_100.png 385w, images/header-met-man-en-2-vrouwen-1920x500_322_84.png 322w, images/header-met-man-en-2-vrouwen-1920x500_269_70.png 269w, images/header-met-man-en-2-vrouwen-1920x500_225_59.png 225w, images/header-met-man-en-2-vrouwen-1920x500_188_49.png 188w, images/header-met-man-en-2-vrouwen-1920x500.png 1920w" width="1920" height="500"  src="images/header-met-man-en-2-vrouwen-1920x500.png" class=""   ></div><div
 class="full-row-center-absolute flex-parent-center mobile-center-flex-align"><div
-class="flex-box animation-child"><div style="text-align:center; margin-top:100px; margin-bottom:6px;"><img src="https://youmanual-training.talentfirst.nl/youmanual-logo.png" alt="You.Manual logo" style="max-width:100%; width:340px; height:auto; display:inline-block;"></div><p class="align-center bg-img-shadow" style="color:#FEFEFE; font-size:0.85em; font-weight:bold; letter-spacing:0.1em; text-transform:uppercase; margin-top:14px; margin-bottom:0; opacity:0.9;">You.Manual™ (DISC) certificering</p><h1 class="align-center hero-main-title bg-img-title bg-img-shadow" style="margin-top: 18px;"><p><strong>Binnen 60 minuten ben je klaar om deze krachtige zelfkennistool in te zetten voor je collega’s, je klanten en jezelf.</strong></p></h1><h2 class=" align-center font-size-standard hero-sub-title bg-img-title bg-img-shadow bg-img-subtitle" ><p><strong>Je koopt vandaag en je begint vandaag. Over een uur heb je je eigen You.Manual™ gelezen, weet je wat je grafiek zegt, en ligt er een uitnodiging bij de eerste persoon met wie je gaat oefenen.</strong></p></h2><p class="align-center bg-img-shadow" style="color:#FEFEFE; font-size:0.95em; margin-top:14px; opacity:0.85;">Meer dan 5.000 coaches, trainers en HR-professionals gingen je voor, in 25 jaar.</p><div
+class="flex-box animation-child"><p class="align-center bg-img-shadow" style="color:#FEFEFE; font-size:0.85em; font-weight:bold; letter-spacing:0.1em; text-transform:uppercase; margin-top:14px; margin-bottom:0; opacity:0.9;">You.Manual™ (DISC) certificering</p><h1 class="align-center hero-main-title bg-img-title bg-img-shadow" style="margin-top: 18px;"><p><strong>Binnen 60 minuten ben je klaar om deze krachtige zelfkennistool in te zetten voor je collega’s, je klanten en jezelf.</strong></p></h1><h2 class=" align-center font-size-standard hero-sub-title bg-img-title bg-img-shadow bg-img-subtitle" ><p><strong>Je koopt vandaag en je begint vandaag. Over een uur heb je je eigen You.Manual™ gelezen, weet je wat je grafiek zegt, en ligt er een uitnodiging bij de eerste persoon met wie je gaat oefenen.</strong></p></h2><p class="align-center bg-img-shadow" style="color:#FEFEFE; font-size:0.95em; margin-top:14px; opacity:0.85;">Meer dan 5.000 coaches, trainers en HR-professionals gingen je voor, in 25 jaar.</p><div
 class="hero-cta"><div
 class="align-button"><div
 class="align-button-inner-wrapper"><div
@@ -769,6 +769,52 @@ class="full-row-center"><div style="max-width: 1080px; margin: 0 auto; padding: 
 <!-- EINDE YOUMANUAL SHOWCASE BLOK -->
 
 <style>
+/* Logobalk boven de hero. Het logo stond eerder ín de hero-inhoud, die
+   verticaal gecentreerd wordt in een vak van 500px terwijl de inhoud hoger
+   is — daardoor viel het logo boven de pagina weg. */
+.ym-logobalk {
+  background: #ffffff;
+  text-align: center;
+  padding: 16px 20px;
+  line-height: 0;
+}
+.ym-logobalk img {
+  width: 300px; max-width: 70%; height: auto; display: inline-block;
+}
+@media (max-width: 600px) {
+  .ym-logobalk { padding: 12px 16px; }
+  .ym-logobalk img { width: 210px; }
+}
+/* De hero moet de inhoud kunnen bevatten, anders loopt de bovenkant er weer
+   uit. De achtergrondfoto vult de hoogte mee. De wrapper staat vast op 500px
+   met overflow:hidden en kapte de foto daar af — vandaar overflow:visible. */
+.full-hero-row.image-bg-hero { height: auto !important; min-height: 700px; }
+.full-hero-row.image-bg-hero .hero-bg-img { overflow: visible !important; }
+.full-hero-row.image-bg-hero .hero-bg-img img {
+  height: 700px !important; width: 100% !important; object-fit: cover !important;
+}
+.full-hero-row.image-bg-hero .full-row-center-absolute { height: 700px !important; }
+
+/* Op smalle schermen wikkelt de kop over meer regels en wordt de inhoud fors
+   hoger. Gemeten inhoudshoogtes: 700px breed -> 767, 560 -> 865, 414 -> 1079,
+   375 -> 1192. De hoogtes hieronder houden daar marge op; te ruim betekent
+   alleen wat meer foto in beeld, te krap betekent tekst die wegvalt. */
+@media (max-width: 900px) {
+  .full-hero-row.image-bg-hero { min-height: 950px; }
+  .full-hero-row.image-bg-hero .hero-bg-img img { height: 950px !important; }
+  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 950px !important; }
+}
+@media (max-width: 700px) {
+  .full-hero-row.image-bg-hero { min-height: 1050px; }
+  .full-hero-row.image-bg-hero .hero-bg-img img { height: 1050px !important; }
+  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 1050px !important; }
+}
+@media (max-width: 500px) {
+  .full-hero-row.image-bg-hero { min-height: 1320px; }
+  .full-hero-row.image-bg-hero .hero-bg-img img { height: 1320px !important; }
+  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 1320px !important; }
+}
+
 /* De usp-grid staat vast op twee kolommen, ook als er maar één blok in zit.
    Dat perste de opsomming in de halve breedte: drie woorden per regel. */
 .usp-grid:has(> :only-child) { grid-template-columns: 1fr !important; }
