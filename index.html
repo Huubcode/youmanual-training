@@ -788,31 +788,30 @@ class="full-row-center"><div style="max-width: 1080px; margin: 0 auto; padding: 
 /* De hero moet de inhoud kunnen bevatten, anders loopt de bovenkant er weer
    uit. De achtergrondfoto vult de hoogte mee. De wrapper staat vast op 500px
    met overflow:hidden en kapte de foto daar af — vandaar overflow:visible. */
-.full-hero-row.image-bg-hero { height: auto !important; min-height: 700px; }
+.full-hero-row.image-bg-hero { height: auto !important; min-height: 740px; }
 .full-hero-row.image-bg-hero .hero-bg-img { overflow: visible !important; }
 .full-hero-row.image-bg-hero .hero-bg-img img {
-  height: 700px !important; width: 100% !important; object-fit: cover !important;
+  height: 740px !important; width: 100% !important; object-fit: cover !important;
 }
-.full-hero-row.image-bg-hero .full-row-center-absolute { height: 700px !important; }
+.full-hero-row.image-bg-hero .full-row-center-absolute { height: 740px !important; }
 
-/* Op smalle schermen wikkelt de kop over meer regels en wordt de inhoud fors
-   hoger. Gemeten inhoudshoogtes: 700px breed -> 767, 560 -> 865, 414 -> 1079,
-   375 -> 1192. De hoogtes hieronder houden daar marge op; te ruim betekent
-   alleen wat meer foto in beeld, te krap betekent tekst die wegvalt. */
-@media (max-width: 900px) {
-  .full-hero-row.image-bg-hero { min-height: 950px; }
-  .full-hero-row.image-bg-hero .hero-bg-img img { height: 950px !important; }
-  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 950px !important; }
-}
-@media (max-width: 700px) {
-  .full-hero-row.image-bg-hero { min-height: 1050px; }
-  .full-hero-row.image-bg-hero .hero-bg-img img { height: 1050px !important; }
-  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 1050px !important; }
-}
-@media (max-width: 500px) {
-  .full-hero-row.image-bg-hero { min-height: 1320px; }
-  .full-hero-row.image-bg-hero .hero-bg-img img { height: 1320px !important; }
-  .full-hero-row.image-bg-hero .full-row-center-absolute { height: 1320px !important; }
+/* Op smalle schermen werkt een vast vak niet: de kop wikkelt over veel meer
+   regels, en een vak dat hoog genoeg is voor die tekst is hoger dan het scherm.
+   De inhoud staat dan gecentreerd in dat vak, dus je krijgt eerst een half
+   scherm uitvergrote foto voordat de tekst begint.
+   Daarom hier geen vaste hoogte: de hero groeit mee met de tekst en de foto
+   komt als achtergrond achter precies die hoogte. */
+@media (max-width: 1100px) {
+  .full-hero-row.image-bg-hero { height: auto !important; min-height: 0 !important; }
+  .full-hero-row.image-bg-hero .hero-bg-img { display: none !important; }
+  .full-hero-row.image-bg-hero .full-row-center-absolute {
+    position: relative !important;
+    height: auto !important;
+    padding: 36px 18px 44px !important;
+    background-image: url('images/header-met-man-en-2-vrouwen-1920x500.png');
+    background-size: cover;
+    background-position: 60% center;
+  }
 }
 
 /* De usp-grid staat vast op twee kolommen, ook als er maar één blok in zit.
