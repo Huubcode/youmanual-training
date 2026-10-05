@@ -1,0 +1,12 @@
+#!/bin/sh
+# pre-commit: geheimen-scan (SEC-INC-2026-017).
+# Blokkeert letterlijke sleutels in staged bestanden; toont alleen pad, soort en sha8.
+# Activeren (eenmalig per clone): git config core.hooksPath .githooks
+# Vals alarm: zet 'geheimen-scan:negeer' op die regel, of de sha8 in .githooks/geheimen-toegestaan.txt.
+# Noodgeval: SKIP_SECRET_CHECK=1 git commit ...  (meld het aan Alex)
+top="$(git rev-parse --show-toplevel)"
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "geheimen-scan: python3 ontbreekt; scan overgeslagen" >&2
+  exit 0
+fi
+exec python3 "$top/.githooks/geheimen-scan.py"
